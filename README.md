@@ -44,10 +44,10 @@
 
 #### 프로그래머스
 
-- Programmers_문제번호_문제이름.cpp
+- 참여자이름/해당주월요일_week/Programmers_문제번호_문제이름.cpp
 
 #### 백준
 
-- Baekjoon_문제번호_문제이름.cpp
+- 참여자이름/해당주월요일_week/Baekjoon_문제번호_문제이름.cpp
 
 ## 일정표
