@@ -8,9 +8,10 @@
 
 ## 스터디 멤버
 
-|                                     [김명지(팀장)](https://github.com/Starlight258)                                    |                          [황수연(팀원)](https://github.com/H-sooyeon)                                        |                               [안상철(팀원)](https://github.com/DevAnna9408)                                                         |
-| :--------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------------: |
-| ![Starlight258](https://github.com/Alzalddak/AlZalDdak/assets/78211281/fabaae0c-6295-4bff-b7b8-5a12f43d9be4)            |   ![H-sooyeon](https://github.com/Alzalddak/AlZalDdak/assets/78211281/32305973-685d-488a-a978-33cf08a7fbc0) |  ![DevAnna9408](https://github.com/Alzalddak/AlZalDdak/assets/78211281/a035efbc-931e-4593-9d99-779bb5254cf1)
+| [김명지(팀장)](https://github.com/Starlight258)                                    |                          [황수연(팀원)](https://github.com/H-sooyeon)                                        |  [안상철(팀원)](https://github.com/DevAnna9408)     | [고민주 (팀원)](https://github.com/minjuko) |
+| :--------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------------: |:--------------------------------------------------------: |
+| ![Starlight258](https://github.com/Alzalddak/AlZalDdak/assets/78211281/fabaae0c-6295-4bff-b7b8-5a12f43d9be4)            |   ![H-sooyeon](https://github.com/Alzalddak/AlZalDdak/assets/78211281/32305973-685d-488a-a978-33cf08a7fbc0) |  ![DevAnna9408](https://github.com/Alzalddak/AlZalDdak/assets/78211281/a035efbc-931e-4593-9d99-779bb5254cf1)| ![minjuko](https://github.com/Alzalddak/AlZalDdak/assets/78211281/ec698b9b-fd17-430b-ab93-32c79f08bbb4) |
+
 
 ## 스터디 규칙 
 
