@@ -44,7 +44,7 @@ int solution(int N, vector<vector<int> > road, int K) {
             answer++;
         }
     }
-    
+     
 
     cout << answer << endl;
 
