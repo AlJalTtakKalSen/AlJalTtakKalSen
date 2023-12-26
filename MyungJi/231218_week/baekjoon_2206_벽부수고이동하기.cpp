@@ -47,10 +47,11 @@ int main(){
     // 2. bfs 수행
     bfs();
     // 3. 정답 출력
-    int answer=-1;
-    if(visited[n-1][m-1][0]==0 && visited[n-1][m-1][1]) answer=visited[n-1][m-1][1];
-    else if(visited[n-1][m-1][0] && visited[n-1][m-1][1]==0) answer=visited[n-1][m-1][0];
-    else answer = min(visited[n-1][m-1][0], visited[n-1][m-1][1]);
-    cout << (answer==0?-1:answer);    
+    int ans1 = visited[n-1][m-1][0];
+    int ans2 = visited[n-1][m-1][1];
+    if(ans1==0 && ans2==0) cout << -1;
+    else if (ans1==0) cout << ans2;
+    else if (ans2==0) cout << ans1;
+    else cout << min(ans1, ans2); 
 }
 
