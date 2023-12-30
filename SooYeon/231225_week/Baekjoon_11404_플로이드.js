@@ -11,7 +11,7 @@ for(let i = 1; i <= n; i++) {
   arr[i][i] = 0; // 자기 자신으로의 경로는 0
 }
 
-for(let i = 2; i <= m; i++) {
+for(let i = 2; i <= m + 1; i++) {
   let [a, b, c] = input[i].split(' ').map(Number);
   arr[a][b] = Math.min(arr[a][b], c);
 }
