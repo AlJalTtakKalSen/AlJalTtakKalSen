@@ -1,5 +1,5 @@
 #include <bits/stdc++.h>
-long long maxY, minY;
+int maxY, minY;
 using namespace std;
 
 long long solution(int r1, int r2) {
