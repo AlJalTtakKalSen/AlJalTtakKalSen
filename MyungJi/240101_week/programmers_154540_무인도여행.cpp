@@ -21,7 +21,6 @@ int dfs(vector<string> &maps, int y, int x){
     return sum;
 }
 
-
 vector<int> solution(vector<string> maps) {
     vector<int> answer;
     //1. dfs 수행
@@ -32,7 +31,7 @@ vector<int> solution(vector<string> maps) {
             }              
         }
     }
-    if (answer.size()==0) return {-1};
+    if (answer.empty()) return {-1};
     //2. 배열 정렬
     sort(answer.begin(), answer.end());
     return answer;
