@@ -1,48 +1,40 @@
 #include <bits/stdc++.h>
 using namespace std;
-
+int v, n, a, b, farthestNode, maxDistance;
 vector<pair<int, int>> tree[100004];
-bool visited[100004];
-int farthestNode = 0;
-int maxDistance = 0;
+int visited[100004];
 
-void dfs(int node, int distance) {
-    visited[node] = true;
-    if (distance > maxDistance) {
+void dfs(int node, int distance){
+    if (distance > maxDistance){
         maxDistance = distance;
         farthestNode = node;
     }
-    for (auto &p : tree[node]) {
-        if (!visited[p.first]) {
-            dfs(p.first, distance + p.second);
-        }
+    visited[node] = 1;
+    for (auto &p : tree[node]){
+        if (visited[p.first]) continue;
+        dfs(p.first, distance + p.second);
     }
 }
 
-int main() {
-    ios_base::sync_with_stdio(0); cin.tie(0);
-    int v, x, a, b;
+
+int main(){
+    //1. 입력받기
     cin >> v;
-    for (int i = 0; i < v; ++i) {
-        cin >> x;
-        while (true) {
+    for(int i=0;i<v;i++){
+        cin >> n;
+        while(true){
             cin >> a;
-            if (a == -1) break;
+            if (a==-1) break;
             cin >> b;
-            tree[x].push_back({a, b});
+            tree[n].push_back({a, b});
         }
     }
-
-    // 첫 번째 DFS 실행
+    // 2. 가장 긴 노드 찾기
     dfs(1, 0);
-    
-    // 방문 기록 초기화
-    fill(visited, visited + v + 1, false);
+    // 3. 가장 긴 노드로 최대 거리 = 트리의 지름 구하기
     maxDistance = 0;
-
-    // 두 번째 DFS 실행
+    fill(visited, visited+100004, 0);
     dfs(farthestNode, 0);
-
-    cout << maxDistance << '\n';
-    return 0;
+    //4. 정답 출력하기
+    cout << maxDistance;
 }
