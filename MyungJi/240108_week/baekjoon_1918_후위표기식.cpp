@@ -1,53 +1,44 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int precedence(char c) {
-    if(c == '*' || c == '/') return 2;
-    else if(c == '+' || c == '-') return 1;
+stack<char> op; // 연산자 저장 스택
+
+//우선순위 정하는 함수
+int prio(char c){
+    if (c=='*' || c=='/') return 2; // 가장 높음
+    else if (c=='+' || c=='-') return 1;
     else return -1;
 }
 
-string infixToPostfix(string s) {
-    stack<char> st; 
-    string result;
-
-    for(int i = 0; i < s.length(); i++) {
-        char c = s[i];
-
-        if((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))
-            result += c;
-
-        else if(c == '(')
-            st.push('(');
-
-        else if(c == ')') {
-            while(st.top() != '(') {
-                result += st.top();
-                st.pop();
+int main(){
+    //1. 입력받기
+    string str="";
+    cin  >> str;
+    string result="";
+    //2. 구현
+    for(int i=0;i<str.length();i++){
+        char c = str[i];
+        if (('A'<=c) && (c<='Z')) result += c;
+        else if (c=='(') op.push(c);
+        else if (c==')'){
+            while (op.top() != '('){
+                result += op.top();
+                op.pop();
             }
-            st.pop();
+            op.pop(); // '(' 제거
         }
-
-        else {
-            while(!st.empty() && precedence(s[i]) <= precedence(st.top())) {
-                result += st.top();
-                st.pop(); 
-            }
-            st.push(c);
-        }
+        else{ // 이전 연산자가 더 크거나 같은 우선순위일 경우 출력
+            while (!op.empty() && prio(op.top())>=prio(c)){
+                result += op.top();
+                op.pop();
+            } op.push(c);
+        } 
     }
-
-    while(!st.empty()) {
-        result += st.top();
-        st.pop();
+    // 스택에 있는 값 모두 출력
+    while(!op.empty()){
+        result += op.top();
+        op.pop();
     }
-
-    return result;
-}
-
-int main() {
-    string exp;
-    cin >> exp;
-    cout << infixToPostfix(exp) << endl;
-    return 0;
+    // 3. 정답 출력
+    cout << result;
 }
