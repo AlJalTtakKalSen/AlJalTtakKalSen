@@ -16,16 +16,15 @@ let testCase = Number(input[0]);
 let answer = [];
 const bfs = (a, b) => {
   let queue = [[a, '']];
-  let visited = {[a]: true};
+  let visited = Array(10000).fill(false);
+  visited[a] = true;
   while(queue.length) {
     let [value, command] = queue.shift();
 
     if(value == b) {
       answer.push(command);
-      break;
+      return;
     }
-
-    if(value >= 10000) continue; // 값의 범위를 벗어나는 경우
 
     for(let oper of ['D', 'S', 'L', 'R']) {
       let nextValue;
