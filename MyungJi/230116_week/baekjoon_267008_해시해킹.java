@@ -11,7 +11,7 @@ public class Main {
 		int a = sc.nextInt();
 		int h = sc.nextInt();
 
-		for(int i = 0; i < n-1; i ++){
+		for(int i = 0; i < n-1; i ++){ // M^n-1에 1000000007을 나눈 값
 			answer = (answer * m)%1000000007;
 		}
         System.out.println(answer);
