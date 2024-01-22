@@ -19,9 +19,6 @@ int main()
     visited[N] = true;
     q.push(make_pair(N,0));
 
-    int minTime = MAX;
-    int minTimeCount = 0;
-
     while (!q.empty())
     {
         int location = q.front().first;
@@ -29,15 +26,10 @@ int main()
         q.pop();
         visited[location] = true;
 
-        if (minTimeCount && location == K && minTime == time)
+        if(location == K)
         {
-            minTimeCount++;
-        }
-
-        if (!minTimeCount && location == K)
-        {
-            minTime = time;
-            minTimeCount++;
+            cout << time;
+            break;
         }
 
         int case1 = location * 2;
@@ -46,7 +38,7 @@ int main()
 
         if (case1 >= 0 && case1 <= 100001 && !visited[case1])
         {
-            q.push(make_pair(case1, time + 1));
+            q.push(make_pair(case1, time));
         }
         if (case2 >= 0 && case2 <= 100001 && !visited[case2])
         {
@@ -58,8 +50,6 @@ int main()
         }
 
     }
-
-    cout << minTime << endl << minTimeCount;
 
     return 0;
 }
