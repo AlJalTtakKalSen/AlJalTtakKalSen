@@ -1,15 +1,12 @@
-package Practice;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.HashMap;
 
-public class prac11 {
+public class Main {
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        String line;
         HashMap<String, Double> mp = new HashMap<>();
         mp.put("A+", 4.5);
         mp.put("A0", 4.0);
@@ -21,16 +18,16 @@ public class prac11 {
         mp.put("D0", 1.0);
         mp.put("F", 0.0);
         double sum = 0;
-        int cnt = 0;
-        while ((line = br.readLine()) != null) {
+        double totalCredits = 0;
+        for (int i = 0; i < 20; i++) {
+            String line = br.readLine();
             String[] stringArray = line.split(" ");
             if (stringArray[2].equals("P")) continue;
-            sum += Double.parseDouble(stringArray[1]) * mp.get(stringArray[2]);
-            cnt++;
+            double credits = Double.parseDouble(stringArray[1]);
+            sum += credits * mp.get(stringArray[2]);
+            totalCredits += credits;
         }
-        double average = sum / cnt;
-        System.out.printf("average = %.6f\n", average);
-
+        double average = sum / totalCredits;
+        System.out.printf("%.6f\n", average);
     }
-
 }
