@@ -8,6 +8,11 @@ let stack = [];
 // 우선순위는 *, / -> +, -
 // 스택에서 위로 갈 수록 우선순위가 높아짐. 즉, pop 되는 것도 우선순위가 높은 것부터 pop 된다.
 
+// *나 /를 만나면 stack에서 '+'나 '-'나 '('가 아닌게 top인 동안은 쭉 뽑아주고,
+// +나 -를 만나면 stack에서 '('가 아닌 게 top인 동안은 쭉 뽑아주고,
+// '('는 그냥 push, ')'은 stack에서 ')'가 top일 때까지 쭉 뽑는다.
+// 숫자는 그때그때 출력
+
 let answer = '';
 for(let i = 0; i < expression.length; i++) {
   if(expression[i] === '*' || expression[i] === '/') {
