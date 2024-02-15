@@ -4,7 +4,7 @@
 - 기간: 2023년 12월~
 - 정기 발표: 화, 목, 토요일 오후 9시
 - 참고 사이트: [프로그래머스](https://programmers.co.kr/learn/challenges), [백준](https://www.acmicpc.net/)
-- 언어: C++, 파이썬
+- 언어: C++, 파이썬, JavaScript, Java
 
 ## 스터디 멤버
 
